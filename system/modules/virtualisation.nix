@@ -16,9 +16,6 @@
 
     docker = {
       enable = true;
-      extraOptions = {
-        storage-driver = "overlay2";
-      };
     };
 
   };

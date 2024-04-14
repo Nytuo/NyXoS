@@ -55,3 +55,44 @@
 - **rebuild** - alias to `nixos-rebuild switch`
 - **fullRebuild** - same as previous but also includes `home-manager switch`
 - **homeRebuild** - only rebuild home-manager
+
+
+## Reminder :
+
+# Install
+perform a minimal install (with graphical installer Calamares, but choose 'No desktop')
+
+# go into a root shell
+sudo su
+
+# go inside a shell with properly required programs
+nix-shell -p git nixUnstable
+
+# create this folder if necessary
+mkdir -p /mnt/etc/
+
+# clone the repo
+git clone https://github.com/Nytuo/NyXoS.git /mnt/etc/nixos
+
+# Keep old hardware-configuration.nix for fs entry
+Edit the hardware to have a filesystem entry on it corresponding to the output of the new one we will generate after
+
+# remove this file
+rm /mnt/etc/nixos/system/hardware-configuration.nix
+
+# generate the config and take some files
+nixos-generate-config --root /mnt
+rm /mnt/etc/nixos/configuration.nix
+mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/system
+
+# make sure you're in this path
+cd /mnt/etc/nixos
+
+nixos-install --flake '.#nixos-personal'
+
+or
+
+nixos-rebuild switch --flake .#nixos-personal
+
+reboot
+
