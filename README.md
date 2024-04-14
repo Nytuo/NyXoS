@@ -1,37 +1,4 @@
-# NixOS + Hyprland (Secureboot enabled)
-
-![SDDM screenshot](./images/sddm.png)
-
-![Hyprland screenshot](./images/image_2024-03-29_11-24-54.png)
-
-> ⚠ WARNING! This configuration uses [lanzaboote](https://github.com/nix-community/lanzaboote) for Secure boot support. If you want to use the flake and don't need secure boot, make appropriate changes in [boot.nix](./system/boot.nix).
-
-> ⚠ WARNING! Make sure to change [hardware-configuration.nix](./system/hardware-configuration.nix) according to your PC or generate a new one via `nixos-generate-config --root /mnt` while installing.
-
-> ⚠ WARNING! Make sure to change home paths for config files in [user](./home/config).
-
-> ⚠ WARNING! This configuration uses Podman as opposed to Docker, if you want to use dokcer make according changes in [virtualisation](./system/modules/virtualisation.nix).
-
-> ⚠ WARNING! There might be some non-critical bugs in configuration as I'm still working on it.
-
-## Table Of Contents
-
-- ℹ [About](#-about)
-- 🔧 [Components](#-components)
-- ⌨ [Keybindings](#-keybindings)
-- [NixOS specific zsh aliases](#-nixos-specific-zsh-aliases)
-- 📖 [License](#-license)
-
-## ℹ About
-
-This repository is housing my daily drive NixOS configuration using ❄️ flakes, running Hyprland. Feel free to utilize it in its entirety or borrow specific components for your own configuration.
-
-> Configuration is not lightweight and may require some disk space.
-
-Notably, it utilizes:
-
-- **flake** (Experimental feature of the Nix package manager)
-- **nixpkgs**: unstable (only used for hyprshot & [Vesktop](https://github.com/Vencord/Vesktop))
+# NixOS + Hyprland
 
 ## 🔧 Components
 
@@ -58,7 +25,7 @@ Notably, it utilizes:
 | Logout menu      | Wlogout                        |
 | Wallpaper        | Hyprpaper                      |
 | Display Manager  | SDDM                           |
-| Containerization | Podman                         |
+| Containerization | Docker                         |
 | Virtualisation   | qemu + virt-manager + libvirtd |
 
 ## ⌨ Keybindings
@@ -82,17 +49,9 @@ Notably, it utilizes:
 | SUPER + C                 | Launch `telegram-desktop`                                             |
 | Print                     | Take screenshot (currently configured to area capture into clipboard) |
 
-All other keybindings can be found at [bind.conf](./home/config/hypr/bind.conf)
-
 ## NixOS specific zsh aliases
 
 - **fullClean** - Fully clean old generations data
 - **rebuild** - alias to `nixos-rebuild switch`
 - **fullRebuild** - same as previous but also includes `home-manager switch`
 - **homeRebuild** - only rebuild home-manager
-
-> Make sure to make appropriate changes to [shell.nix](./home/user/shell.nix) flake paths.
-
-## 📖 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
