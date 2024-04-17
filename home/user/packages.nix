@@ -6,7 +6,6 @@
   home.packages = [
 
     # Dev stuff
-    pkgs.jetbrains.intellij-idea-ultimate
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.webstorm
     pkgs.jetbrains.clion
@@ -32,7 +31,6 @@
 
         
     pkgs.discord
-    pkgs.slack-desktop
     pkgs.spotify
     pkgs.vlc
     pkgs.inkscape
