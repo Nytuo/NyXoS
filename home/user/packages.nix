@@ -6,6 +6,7 @@
   home.packages = [
 
     # Dev stuff
+    pkgs.gitAndTools.gh
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.webstorm
     pkgs.jetbrains.clion
