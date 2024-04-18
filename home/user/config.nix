@@ -6,7 +6,6 @@ in
       ".config/wallpapers".source = "${configDir}/wallpapers";
       ".config/foot".source = "${configDir}/foot";
       ".config/neofetch".source = "${configDir}/neofetch";
-      ".config/hypr".source = "${configDir}/hypr";
       ".config/swayidle".source = "${configDir}/swayidle";
       ".config/swaylock".source = "${configDir}/swaylock";
       ".config/wlogout".source = "${configDir}/wlogout";
