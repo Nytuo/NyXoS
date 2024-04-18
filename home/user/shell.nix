@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 let 
   myAliases = {
-    cat = "bat";
     ls = "eza --icons=always";
-
+    ll = "eza -a --long --icons=always";
     fullClean = '' 
         nix-collect-garbage --delete-old
 
@@ -14,6 +13,7 @@ let
     rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
     fullRebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/ && home-manager switch --flake ~/.dotfiles/ -b backup";
     homeRebuild = "home-manager switch --flake ~/.dotfiles/ -b backup";
+
 };
 in
 {
@@ -32,11 +32,15 @@ in
 		oh-my-zsh = {
 			enable = true;
 			custom = "$HOME/.oh-my-custom";
-			theme = "powerlevel10k/powerlevel10k";
+			theme = "agnoster";
 			plugins = [
 				"git"
-				"history"
-				"wd"
+        "zsh-autosuggestions"
+        "zsh-autocomplete"
+        "vscode"
+        "docker-compose"
+        "docker"
+        "thefuck"
 			];
 		};
 	};

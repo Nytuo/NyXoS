@@ -7,7 +7,7 @@
 
     environment.systemPackages = with pkgs; [
       hyprpaper
-      kitty
+      foot
       libnotify
       mako
       qt5.qtwayland

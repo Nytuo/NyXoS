@@ -12,7 +12,7 @@
 | Notification     | Mako                           |
 | Launcher         | Wofi                           |
 | Editor           | Neovim                         |
-| Terminal         | Kitty                          |
+| Terminal         | foot                          |
 | Fetch Utility    | Neofetch                       |
 | Theme            | Catppuccin Macchiato           |
 | Font             | JetBrains Mono & Font Awesome  |
@@ -41,7 +41,7 @@
 | SUPER + Q                 | Kill active window                                                    |
 | SUPER + SHIFT + Q         | Launch `swaylock`                                                     |
 | SUPER + M                 | Exit from `hyprland`                                                  |
-| SUPER + Return            | Launch `kitty`                                                        |
+| SUPER + Return            | Launch `foot`                                                        |
 | SUPER + D                 | Launch `wofi`                                                         |
 | SUPER + E                 | Launch `thunar`                                                       |
 | SUPER + M                 | Launch `wlogout`                                                      |

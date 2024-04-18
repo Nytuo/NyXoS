@@ -4,7 +4,7 @@ in
   home.file = {
       ".config/nvim".source = "${configDir}/nvim";
       ".config/wallpapers".source = "${configDir}/wallpapers";
-      ".config/kitty".source = "${configDir}/kitty";
+      ".config/foot".source = "${configDir}/foot";
       ".config/neofetch".source = "${configDir}/neofetch";
       ".config/hypr".source = "${configDir}/hypr";
       ".config/swayidle".source = "${configDir}/swayidle";
