@@ -20,6 +20,8 @@
     libsForQt5.qt5.qtsvg
     neofetch
     neovim
+    github-desktop
+    vscode
     ripgrep
     tldr
     unzip

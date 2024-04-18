@@ -57,5 +57,9 @@
     pkgs.catppuccin-cursors.macchiatoBlue
     pkgs.catppuccin-gtk
     pkgs.papirus-folders
+
+    # AGS
+     pkgs.pywal
+        pkgs.sassc
   ];
 }

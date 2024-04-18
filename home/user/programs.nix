@@ -1,20 +1,28 @@
 { inputs, pkgs, ... }:
 {
-  
+
+  imports = [
+    inputs.ags.homeManagerModules.default
+  ];
+
+
   programs.ags = {
     enable = true;
+    configDir = null; # if ags dir is managed by home-manager, it'll end up being read-only. not too cool.
+    # configDir = ./.config/ags;
 
-    # null or path, leave as null if you don't want hm to manage the config
-    configDir = ../ags;
-
-    # additional packages to add to gjs's runtime
     extraPackages = with pkgs; [
       gtksourceview
+      gtksourceview4
+      python311Packages.material-color-utilities
+      python311Packages.pywayland
+      pywal
+      sassc
       webkitgtk
-      accountsservice
+      webp-pixbuf-loader
+      ydotool
     ];
   };
-
   programs.firefox = {
     enable = true;
 
