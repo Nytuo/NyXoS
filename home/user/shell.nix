@@ -23,11 +23,7 @@ in
 		enableAutosuggestions = true;
 		syntaxHighlighting.enable = true;
 		initExtra = '' 
-            source ~/.p10k.zsh && 
-            eval "$(zoxide init --cmd cd zsh)" && 
-
-            export PATH="$PATH:/home/arnaud/.dotnet/tools"
-        ''; 
+            ''; 
 		shellAliases = myAliases;
 		oh-my-zsh = {
 			enable = true;
