@@ -7,6 +7,7 @@
         ./packages.nix
         ./programs.nix
         ./environment.nix
+        ./hyprland.nix
     ];
 
   nixpkgs = {

@@ -6,7 +6,6 @@
         ./fonts.nix
         ./gaming.nix
         ./hardware.nix
-        ./hyprland.nix
         ./internationalisation.nix
         ./misc.nix
         ./networking.nix
