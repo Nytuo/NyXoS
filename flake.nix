@@ -6,13 +6,7 @@
         nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
         home-manager.url = "github:nix-community/home-manager/release-23.11";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
-        hyprland.url = "github:hyprwm/Hyprland";
-        hyprland-plugins = {
-              url = "github:hyprwm/hyprland-plugins";
-              # inputs.nixpkgs.follows = "hyprland";
-            };
 
-        ags.url = "github:Aylur/ags";
         firefox-addons = {
             url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
             inputs.nixpkgs.follows = "nixpkgs";
